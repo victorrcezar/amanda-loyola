@@ -3,52 +3,109 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Estratégia Tráfego - UP! Company</title>
+    <title>Crescendo com a Falta de Paternidade | Amanda Loyola</title>
+    <meta name="description" content="Descubra como curar as feridas da ausência paterna e reencontrar sua identidade." />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script>
       tailwind.config = {
         theme: {
           extend: {
-            colors: {
-              primary: '#0A1F2E', // Azul Escuro Profundo
-              'primary-light': '#0E2F3D', // Azul Médio
-              secondary: '#C49B66', // Dourado Sofisticado
-              accent: '#1F3B2E', // Verde Escuro Elegante
-              neutral: '#2C3E50', // Cinza Azulado
-              background: '#F5F5F5', // Off White
-              surface: '#FFFFFF', // Pure White
-            },
             fontFamily: {
-              sans: ['Poppins', 'sans-serif'],
-              serif: ['Montserrat', 'sans-serif'],
+              sans: ['Inter', 'sans-serif'],
+              serif: ['Playfair Display', 'serif'],
+              hand: ['Dancing Script', 'cursive'],
+            },
+            colors: {
+              brand: {
+                50: '#fffbf0',
+                100: '#fdeebd',
+                200: '#fce08b',
+                300: '#facd52',
+                400: '#f5b50a',
+                500: '#f0a000',
+                600: '#E0A038', // Vibrant Gold
+                700: '#b37418',
+                800: '#8f5918',
+                900: '#754818',
+              },
+              sand: {
+                50: '#fdfcfb',
+                100: '#fcfbf9',
+                200: '#f7f5f2',
+                300: '#efece6',
+                400: '#e2ddd3',
+                500: '#cec6b6',
+                800: '#5c5446',
+                900: '#2e2a23',
+              }
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-15px)' },
+              },
+              blink: {
+                '0%, 100%': { opacity: '1' },
+                '50%': { opacity: '0' },
+              }
+            },
+            animation: {
+              'float': 'float 5s ease-in-out infinite',
+              'bounce-slow': 'bounce 3s infinite',
+              'blink': 'blink 1s step-end infinite',
+            },
+            backgroundImage: {
+              'noise': "url('https://www.transparenttextures.com/patterns/noise-lines.png')",
             }
           }
         }
       }
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Inter:wght@300;400;500;600&family=Playfair Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <style>
       body {
-        margin: 0;
+        font-family: 'Inter', sans-serif;
+        color: #2e2a23;
+        background-color: #fdfcfb;
+      }
+      h1, h2, h3, h4, .font-serif {
+        font-family: 'Playfair Display', serif;
+      }
+      .font-hand {
+        font-family: 'Dancing Script', cursive;
+      }
+      .smooth-scroll {
         scroll-behavior: smooth;
+      }
+      /* 3D Flip Card Utilities */
+      .perspective-1000 {
+        perspective: 1000px;
+      }
+      .transform-style-3d {
+        transform-style: preserve-3d;
+      }
+      .backface-hidden {
+        backface-visibility: hidden;
+      }
+      .rotate-y-180 {
+        transform: rotateY(180deg);
       }
     </style>
   <script type="importmap">
 {
   "imports": {
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "recharts": "https://aistudiocdn.com/recharts@^3.5.1",
     "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0"
+    "react": "https://aistudiocdn.com/react@^19.2.0"
   }
 }
 </script>
 <link rel="stylesheet" href="/index.css">
 </head>
-  <body>
+  <body class="smooth-scroll antialiased">
     <div id="root"></div>
   <script type="module" src="/index.tsx"></script>
 </body>
