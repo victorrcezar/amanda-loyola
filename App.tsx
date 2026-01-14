@@ -431,12 +431,23 @@ const Footer: React.FC = () => (
       <BookOpen className="w-6 h-6 md:w-8 md:h-8 mx-auto text-brand-600 mb-6 opacity-80" />
       <p className="mb-6 font-serif text-base md:text-lg text-sand-200">"A cura começa quando o silêncio termina."</p>
       <div className="w-12 h-0.5 bg-brand-800 mx-auto mb-8"></div>
-      <p className="mb-2">&copy; {new Date().getFullYear()} Amanda Loyola.</p>
-      <div className="flex justify-center gap-4 md:gap-6 mb-8 text-[10px] md:text-xs tracking-wide uppercase">
-        <a href="#" className="hover:text-brand-400 transition-colors">Termos</a>
-        <a href="#" className="hover:text-brand-400 transition-colors">Privacidade</a>
-        <a href="#" className="hover:text-brand-400 transition-colors">Suporte</a>
-      </div>
+      <p className="mb-8 text-sand-500">&copy; {new Date().getFullYear()} Amanda Loyola.</p>
+      
+      <a 
+        href="https://upandco.com.br" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="inline-flex items-center justify-center gap-2 opacity-60 hover:opacity-100 transition-all duration-300 group"
+      >
+        <span className="text-[10px] md:text-xs tracking-widest uppercase text-sand-400 group-hover:text-sand-300">
+          Desenvolvido pela <span className="font-bold">UP! Company</span>
+        </span>
+        <img 
+          src="https://static.wixstatic.com/media/1f17f3_1e2b54d2fd894dd997c6cbc18e940576~mv2.png" 
+          alt="UP! Company" 
+          className="h-4 w-auto filter brightness-0 invert opacity-90"
+        />
+      </a>
     </div>
   </footer>
 );
